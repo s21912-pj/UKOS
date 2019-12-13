@@ -1,4 +1,4 @@
 #praca domowa UKOS
-wget -qO- https://www.pse.pl/transmissionMapService | sed 's/{/\n/g' | sed 1,3d | sed 's/\/\n/g' | tac | sed 1,1,d | tac | sed 's:,"id.*: :g'
+wget -qO- https://www.pse.pl/transmissionMapService | sed 's/{/\n/g' | sed 1,3d | sed 's/]/\n/g' | tac | sed 1,1d | tac | sed 's:, "id.*: :g'
 
 
